@@ -1,0 +1,248 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth; /* scroll fluide */
+}
+
+body > *:not(#wave-container) {
+  position: relative;
+  z-index: 1;
+}
+
+body {
+  font-family: "Helvetica Neue", sans-serif;
+  color: #f8fbf7;
+  overflow-x: hidden;
+}
+/* --- SVG container --- */
+#wave-container {
+  position: fixed;
+  inset: 0; /* top:0;right:0;bottom:0;left:0; */
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* derrière le contenu (content a z-index:1) */
+  pointer-events: none; /* permet de cliquer sur le contenu au-dessus */
+  overflow: hidden;
+}
+
+#wave-container svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* IMPORTANT pour transformer des éléments SVG via CSS si besoin */
+#wave-container .wave {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  opacity: 0.95;
+}
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px 20px 50px;
+  z-index: 1000;
+  transition: background 0.6s ease;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fbfafb;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: #fc8eda;
+}
+.burger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Title */
+.title {
+  height: 100vh;
+  background: url("photo-1542273917363-3b1817f69a2d.jpeg") no-repeat center
+    center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.title-content h1 {
+  font-size: 3.5rem;
+  color: #f1f1f1;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+.title-content p {
+  margin-top: 15px;
+  font-size: 1.3rem;
+  color: #f1f1f1;
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+}
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f9f7f9;
+}
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+/* Règles communes */
+.cards article,
+.question,
+.hypothesis {
+  min-width: 280px;
+  background: rgba(255, 255, 255, 0.3); /* blanc mais 30% opaque */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+
+/* Spécifique à .cards article */
+.cards article {
+  flex: 1; /* occupe la place dispo */
+}
+
+/* Spécifique à .question et .hypothesis */
+.question,
+.hypothesis {
+  display: inline-block; /* s’adapte au texte */
+  flex: unset; /* désactive l’héritage de flex */
+  width: auto; /* largeur auto selon contenu */
+}
+
+.cards article:hover {
+  transform: translateY(-5px);
+}
+.cards h3 {
+  margin-bottom: 10px;
+  color: #fc8eda;
+}
+
+/* Footer */
+footer {
+  background: #fc8eda;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pour centrer tous les titres */
+.section h2,
+.cards h3 {
+  text-align: center;
+}
+
+/* Pour justifier tous les paragraphes */
+.section p,
+.cards p,
+.question p,
+.hypothesis p {
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .nav-links.active {
+    display: flex;
+    background: #fc8eda;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1001;
+  }
+  .burger {
+    display: block;
+  }
+  .title-content h1 {
+    font-size: 2rem;
+  }
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.click-here-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: linear-gradient(135deg, #f63bc1 0%, #f7a446 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.click-here-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}

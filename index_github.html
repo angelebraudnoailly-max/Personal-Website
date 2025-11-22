@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angèle Braud-Noailly</title>
+    <link rel="stylesheet" href="style_github.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <body>
+    <!-- Navigation minimaliste -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo">A</div>
+      </div>
+      <div class="nav-items">
+        <a href="#work" class="nav-item">Work</a>
+        <a href="#about" class="nav-item">About</a>
+        <a href="#contact" class="nav-item">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Contenu principal -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="home">
+        <!-- Vidéo de fond avec parallaxe -->
+        <div class="video-container">
+          <video autoplay muted loop playsinline class="background-video">
+            <source src="video.mp4" type="video/mp4" />
+            <source src="video.webm" type="video/webm" />
+          </video>
+          <div class="video-overlay"></div>
+        </div>
+
+        <div class="hero-container">
+          <div class="hero-text">
+            <h1 class="hero-title">
+              <span class="title-main">Angèle's Space</span>
+            </h1>
+            <div class="hero-actions">
+              <a
+                href="#work"
+                class="btn-primary"
+                data-hover="Let's go!"
+                style="text-decoration: none"
+              >
+                View Work
+              </a>
+              <button class="btn-secondary" data-hover="Hello!">
+                Say Hello
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <!-- Espace visuel épuré -->
+          </div>
+        </div>
+        <div class="scroll-hint">
+          <div class="mouse"></div>
+        </div>
+      </section>
+
+      <!-- Work Section -->
+      <section class="work" id="work">
+        <div class="section-header">
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">Some of my recent works</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Projet de gauche -->
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="fleur.jpg"
+                alt="Still cooking this one"
+                class="project-image-real"
+              />
+              <div class="image-placeholder"></div>
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h3>Still cooking this one 🍳</h3>
+                  <p>Project in development</p>
+                </div>
+                <div class="project-actions">
+                  <button class="view-project" disabled>Coming Soon</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet du milieu -->
+          <div class="project-card" data-category="web">
+            <div class="project-image">
+              <img
+                src="russian_writer2.jpg"
+                alt="Projet Website"
+                class="project-image-real"
+              />
+              <div class="image-placeholder"></div>
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h3>Project Website</h3>
+                  <p>Personal portfolio project</p>
+                </div>
+                <div class="project-actions">
+                  <a
+                    href="test_github.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="view-project"
+                  >
+                    Click Here
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projet de droite -->
+          <div class="project-card" data-category="mobile">
+            <div class="project-image">
+              <img
+                src="fleur.jpg"
+                alt="Still cooking this one"
+                class="project-image-real"
+              />
+              <div class="image-placeholder"></div>
+              <div class="project-overlay">
+                <div class="project-info">
+                  <h3>Still cooking this one 🍳</h3>
+                  <p>Project in development</p>
+                </div>
+                <div class="project-actions">
+                  <button class="view-project" disabled>Coming Soon</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="about-container">
+          <div class="about-content">
+            <div class="about-text">
+              <h2>Hello, I'm Angèle</h2>
+              <p class="about-description">
+                I am currently enrolled in the CPES program in Data Science,
+                Arts, and Culture, jointly offered by Université PSL and Lycée
+                Louis-le-Grand. This interdisciplinary training has given me a
+                solid grounding in data science, together with a major in
+                economics that explored certain connections with ecology and
+                environmental concerns and a strong background in cultural
+                studies.
+              </p>
+              <div class="skills">
+                <div class="skill-category">
+                  <h4>Experiences</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag"
+                      >Research internship in computational social sciences at
+                      Sciences Po's Medialab (2 months)</span
+                    >
+                    <span class="skill-tag"
+                      >Interdisciplinary Project at Lycée Louis-le-Grand (1
+                      week)</span
+                    >
+                  </div>
+                </div>
+                <div class="skill-category">
+                  <h4>Skills</h4>
+                  <div class="skill-tags">
+                    <span class="skill-tag">Data sciences</span>
+                    <span class="skill-tag">Economy</span>
+                    <span class="skill-tag">Cultural sciences</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about-visual">
+              <div class="static-image">
+                <img src="fleur2.jpg" alt="Angèle" class="profile-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="contact" id="contact">
+        <div class="contact-container">
+          <div class="contact-header">
+            <h2>Let's create something together</h2>
+            <p>Got a project in mind? I'd love to hear about it.</p>
+          </div>
+          <div class="contact-content">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-icon">📧</div>
+                <div class="contact-details">
+                  <h4>Email</h4>
+                  <a href="mailto:angele.braudnoailly@psl.eu"
+                    >angele.braudnoailly@psl.eu</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="contact-icon">💼</div>
+                <div class="contact-details">
+                  <h4>LinkedIn</h4>
+                  <a
+                    href="https://www.linkedin.com/in/angèle-braud-noailly-392ab035b"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    linkedin.com/in/angèle-braud-noailly
+                  </a>
+                </div>
+              </div>
+            </div>
+            <form class="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" class="form-input" />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  class="form-input"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn-submit">
+                <span>Send Message</span>
+                <div class="btn-arrow">→</div>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-content">
+        <p>Built with 💙 by Angèle Braud-Noailly</p>
+      </div>
+    </footer>
+
+    <script src="script_github.js"></script>
+  </body>
+</html>
